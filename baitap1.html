@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img  alt="f" id="myImage" src=" https://cf.shopee.vn/file/116e3346b7d34d3aee1bd015bf555cb3" style="width: 300px" />
+    <p>click button below to move the image to right</p>
+    <input type="button" value="click me" onclick="moveRight();"/>
+</form>
+<script>
+    let imgObj =null;
+    imgObj =document.getElementById('myImage');
+    function init() {
+        imgObj =document.getElementById('myImage');
+        imgObj.style.position ='relative';
+        imgObj.style.left ='Opx';
+    }
+    function moveRight()  {
+        imgObj.style.left =parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
